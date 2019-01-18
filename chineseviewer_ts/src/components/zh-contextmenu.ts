@@ -18,22 +18,22 @@ export default $(() => {
 
             const menu = {
                 items: {
-                    // speak: {
-                    //     name: "Speak",
-                    //     callback() {
-                    //         postJson("/api/all/speak", { entry: text });
-                    //     }
-                    // },
+                    speak: {
+                        name: "Speak",
+                        callback() {
+                            (window as any).responsiveVoice.speak(text, "Chinese Male");
+                        }
+                    },
                     parseHanzi: {
                         name: "Parse Hanzi",
                         callback() {
-                            location.href = `#!/Hanzi?q=${encodeURIComponent(text)}`;
+                            open(location.origin + `/#!/Hanzi?q=${encodeURIComponent(text)}`, "_blank");
                         }
                     },
                     parseVocab: {
                         name: "Parse vocab",
                         callback() {
-                            location.href = `#!/Vocab?q=${encodeURIComponent(text)}`;
+                            open(location.origin + `/#!/Vocab?q=${encodeURIComponent(text)}`, "_blank");
                         }
                     }
                 }
@@ -50,7 +50,7 @@ export default $(() => {
                     readAsVocab: {
                         name: "Read as vocab",
                         callback() {
-                            location.href = `#!/Vocab?is=${encodeURIComponent(text)}`;
+                            open(location.origin + `/#!/Vocab?si=${encodeURIComponent(text)}`, "_blank");
                         }
                     }
                 });

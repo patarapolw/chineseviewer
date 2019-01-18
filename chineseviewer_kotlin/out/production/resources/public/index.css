@@ -65,9 +65,14 @@
     overflow-y: scroll;
 }
 
+.pinyin-list {
+    height: 4em;
+}
+
 .sentence-list {
     height: 200px;
-    overflow-y: scroll;
+    overflow: visible;
+    /* overflow-y: scroll; */
 }
 
 .full-width {
@@ -119,7 +124,6 @@ ruby:hover rt {
 }
 
 .clipboard-input {
-    width: 600px;
     height: 100px;
 }
 
@@ -132,4 +136,30 @@ textarea {
 
 .github-corner, .github-corner > svg {
     z-index: 1000;
+}
+
+.navbar-toggler {
+    margin-right: 20px;
+}
+
+.ruby-float {
+    position: relative;
+}
+
+.rt-float {
+    position: absolute;
+    top: -1.3em;
+    font-size: 0.3em;
+    visibility: hidden;
+    background-color: white;
+    border-radius: 5px;
+    border-color: #bdc3c7;
+    z-index: 10;
+    overflow-y: visible;
+    white-space: nowrap;
+    height: 1.3em;
+}
+
+.ruby-float:hover .rt-float {
+    visibility: visible;
 }

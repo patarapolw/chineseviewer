@@ -1,17 +1,20 @@
 import * as m from "mithril";
+import * as XRegExp from "xregexp";
 
 import { postJson } from "../utils";
 
+const hanRegex = XRegExp("\\p{Han}")
+
 export default (initialVnode: any) => {
-    let textSegments: any[] = [m(".ruby",
+    let textSegments: any[] = [m("div",
         "The result of the parsing of the text will be shown here.")];
 
     function parseSentence(s: string) {
         postJson("/api/sentence/jieba", { entry: s }).then((res) => {
             textSegments = res.segments.map((el: any) => {
-                return el.word === "\n" ? m("br.ruby") : m("ruby.ruby.zh-contextmenu.vocab", [
+                return !hanRegex.test(el.word) ? el.word : m("ruby", [
                     m("rt", el.pinyin),
-                    el.word,
+                    m(".zh-contextmenu.vocab", el.word),
                 ]);
             });
             m.redraw();
@@ -32,7 +35,7 @@ export default (initialVnode: any) => {
                         }
                     }),
                 ]),
-                m(".col-12", textSegments),
+                m("pre.col-12.ruby-area", textSegments),
             ]);
         }
     };

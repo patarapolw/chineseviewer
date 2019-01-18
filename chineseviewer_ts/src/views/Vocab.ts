@@ -28,6 +28,7 @@ export default (initialVnode: any) => {
         postJson("/api/vocab/dictionary/matchMany", { entries: vList }).then((res) => {
             i = 0;
             vocabList = res.entries;
+            console.log(vocabList);
             m.redraw();
         });
     }
@@ -56,7 +57,10 @@ export default (initialVnode: any) => {
                     postJson("/api/sentence/example", { entry: currentVocab.simplified }).then((res) => {
                         sentenceList = res.entries.map((el: any) => {
                             return m(".inline", [
-                                m(".zh-contextmenu.sentence", el.chinese),
+                                m(".ruby-float", [
+                                    m(".rt-float", el.pinyin),
+                                    m(".zh-contextmenu.sentence", el.chinese)
+                                ]),
                                 m("div", el.english)
                             ]);
                         });
@@ -97,11 +101,13 @@ export default (initialVnode: any) => {
                         ])
                     ]),
                     m(".col-6", [
-                        m(".row", m("h4", "Traditional")),
+                        m(".row.header-list", m("h4", "Reading")),
+                        m(".row.pinyin-list", currentVocab.pinyin),
+                        m(".row.header-list", m("h4", "Traditional")),
                         m(".row.vocab-small-display.vocab-list.vocab.zh-contextmenu", currentVocab.traditional || ""),
-                        m(".row", m("h4", "English")),
+                        m(".row.header-list", m("h4", "English")),
                         m(".row.vocab-list", currentVocab.english || ""),
-                        m(".row", m("h4", "Sentences")),
+                        m(".row.header-list", m("h4", "Sentences")),
                         m(".row.sentence-list", sentenceList)
                     ])
                 ]),
