@@ -33,8 +33,19 @@ const Layout = {
         return m("#app", [
             m("header.navbar.navbar-expand-lg.navbar-light.bg-light", [
                 m("span.navbar-brand", "Chinese Viewer"),
-                m(NavbarLeft, {current: vnode.attrs.current}),
-                // m(NavbarRight)
+                m("button.navbar-toggler", {
+                    "data-toggle": "collapse",
+                    "data-target": "#navbarMain",
+                    "aria-controls": "navbarMain",
+                    "aria-expanded": false,
+                    "aria-label": "Toggle navigation"
+                }, [
+                    m("span.navbar-toggler-icon"),
+                ]),
+                m("#navbarMain.collapse.navbar-collapse", [
+                    m(NavbarLeft, {current: vnode.attrs.current}),
+                    // m(NavbarRight)
+                ]),
             ]),
             m(".container.mt-3", [
                 m("i", "Right click for more options"),

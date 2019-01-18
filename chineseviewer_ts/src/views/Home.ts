@@ -26,7 +26,7 @@ export default (initialVnode: any) => {
                         display: "inline-block"
                     }
                 }, [
-                    m("textarea.clipboard-input", {
+                    m("textarea.clipboard-input.col-md-6", {
                         oninput(e: any) {
                             parseSentence(e.target.value);
                         }

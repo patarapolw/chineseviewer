@@ -45,3 +45,5 @@ typings/
 .serverless/
 .fusebox/
 .dynamodb/
+
+out/

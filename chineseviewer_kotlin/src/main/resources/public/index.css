@@ -119,7 +119,6 @@ ruby:hover rt {
 }
 
 .clipboard-input {
-    width: 600px;
     height: 100px;
 }
 
@@ -132,4 +131,8 @@ textarea {
 
 .github-corner, .github-corner > svg {
     z-index: 1000;
+}
+
+.navbar-toggler {
+    margin-right: 20px;
 }
