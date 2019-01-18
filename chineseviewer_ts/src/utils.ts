@@ -31,4 +31,11 @@ export async function postJson(url: string, data: any) {
     })).json();
 }
 
+export function speakChinese(s: string) {
+    const utterance = new SpeechSynthesisUtterance(s);
+    utterance.lang = "zh-CN"
+
+    speechSynthesis.speak(utterance);
+}
+
 export default getJsonFromUrl;

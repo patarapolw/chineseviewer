@@ -1,7 +1,7 @@
-import {ContextMenu, ContextMenuItemTypes} from "jquery-contextmenu";
+import {ContextMenu} from "jquery-contextmenu";
 import * as $ from "jquery";
-import { postJson } from "../utils";
 import * as XRegExp from "xregexp";
+import {speakChinese} from "../utils";
 
 import "jquery-contextmenu/dist/jquery.contextMenu.min.css"
 
@@ -21,7 +21,7 @@ export default $(() => {
                     speak: {
                         name: "Speak",
                         callback() {
-                            (window as any).responsiveVoice.speak(text, "Chinese Male");
+                            speakChinese(text);
                         }
                     },
                     parseHanzi: {

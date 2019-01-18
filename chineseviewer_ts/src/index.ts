@@ -49,10 +49,7 @@ const Layout = {
             ]),
             m(".container.mt-3", [
                 m("i", [
-                    m(".d-inline", "Right click for more options, including speech powered by "),
-                    m(".d-inline", {
-                        innerHTML: '<a href="https://responsivevoice.org">ResponsiveVoice-NonCommercial</a> licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><img title="ResponsiveVoice Text To Speech" src="https://responsivevoice.org/wp-content/uploads/2014/08/95x15.png" alt="95x15" width="95" height="15" />'
-                    })
+                    m(".d-inline", "Right click for more options and to speak")
                 ]),
                 vnode.children
             ])
