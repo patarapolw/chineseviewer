@@ -1,0 +1,135 @@
+@font-face {
+    font-family: HanaMin;
+    src: url(fonts/HanaMinA.ttf),
+        url(fonts/HanaMinB.ttf);
+}
+
+.hanzi {
+    font-size: 200px;
+    font-family: HanaMin;
+    width: 1.5em;
+    margin-top: 0.2em;
+    padding-right: 0.3em;
+    text-align: right;
+    overflow-y: hidden;
+    border: none;
+    border-collapse: collapse;
+}
+
+.vocab-display {
+    font-size: 100px;
+    font-family: HanaMin;
+    width: 5em;
+    margin-top: 0.2em;
+    text-align: center;
+    overflow-y: scroll;
+    border: none;
+    border-collapse: collapse;
+}
+
+.character-block div {
+    font-family: "HanaMin";
+    height: 1.2em;
+    width: 1.2em;
+    background: rgba(0, 0, 0, 0);
+    border: none;;
+    font-size: 30px;
+}
+
+.character-block-hover {
+    position: absolute;
+    font-size: 60px !important;
+    left: -9999px;
+    -webkit-box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.5) inset;
+    -moz-box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.5) inset;
+    box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0.5) inset;
+    z-index: 10;
+}
+
+.searchBar {
+    width: 300px;
+    margin-right: 40px;
+}
+
+.vocab-segment {
+    display: inline-block;
+}
+
+.button-prev-next button {
+    width: 150px;
+    font-size: 16px;
+}
+
+.hanzi-list, .vocab-list {
+    height: 100px;
+    overflow-y: scroll;
+}
+
+.sentence-list {
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.vocab-small-display {
+    font-size: 50px;
+    font-family: HanaMin;
+    height: 100px;
+}
+
+.inline {
+    width: 100%;
+}
+
+.inline * {
+    display: inline-block;
+    margin-right: 0.5em;
+}
+
+*:focus {
+    outline: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+.zh-contextmenu:hover, .zh-contextmenu.hover {
+    color: #2980b9;
+}
+
+ruby {
+    display: inline-block !important;
+}
+
+.ruby {
+    font-size: 2em;
+    font-family: HanaMin;
+}
+
+rt {
+    visibility: hidden;
+}
+
+ruby:hover rt {
+    visibility: visible;
+}
+
+.clipboard-input {
+    width: 600px;
+    height: 100px;
+}
+
+textarea {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border-color: #bdc3c7;
+    padding: 10px;
+}
+
+.github-corner, .github-corner > svg {
+    z-index: 1000;
+}
