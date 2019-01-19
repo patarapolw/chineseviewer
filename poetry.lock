@@ -226,7 +226,7 @@ msgpack = "*"
 regex = "2018.02.21"
 
 [metadata]
-content-hash = "31cfd1b196b5bd5dd5ae266ea26ad310e49a3b3ec29ef2aef7a09c6fa0f13131"
+content-hash = "6126eb193564ef82a746f2605b2f7e4ae8ed0f4a1df80f60b9f9f7704fbdf7d1"
 python-versions = "^3.7"
 
 [metadata.hashes]
