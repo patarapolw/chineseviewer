@@ -1,6 +1,6 @@
-# ChineseViewer4k
+# ChineseViewer V2
 
-<http://chineseviewer.herokuapp.com> rewritten in Kotlin and Mithril.js
+<http://chineseviewer.herokuapp.com> rewritten in Python and Mithril.js
 
 ## Screenshots
 

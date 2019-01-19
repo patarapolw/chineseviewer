@@ -32,7 +32,9 @@ const Layout = {
     view(vnode: any) {
         return m("#app", [
             m("header.navbar.navbar-expand-lg.navbar-light.bg-light", [
-                m("span.navbar-brand", "Chinese Viewer"),
+                m("a.navbar-brand", {
+                    href: "/"
+                }, "Chinese Viewer"),
                 m("button.navbar-toggler", {
                     "data-toggle": "collapse",
                     "data-target": "#navbarMain",

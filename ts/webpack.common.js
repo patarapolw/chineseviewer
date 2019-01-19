@@ -1,7 +1,4 @@
 const path = require("path");
-require('dotenv').config({
-  path: ".."
-})
 
 const config = {
   entry: './src/index.ts',

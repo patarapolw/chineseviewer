@@ -1,7 +1,9 @@
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
+const path = require("path");
+
 require('dotenv').config({
-    path: ".."
+    path: "../.env"
 });
 
 module.exports = merge(common, {
@@ -12,6 +14,6 @@ module.exports = merge(common, {
         maxAssetSize: 400000
     },
     output: {
-        path: "/Users/patarapolw/GitHubProjects/chineseviewer4k/chineseviewer_kotlin/src/main/resources/public",
+        path: path.join(process.env.PRODUCTION_STATIC_PATH, "js"),
     },
 });

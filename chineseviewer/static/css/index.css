@@ -1,7 +1,7 @@
 @font-face {
     font-family: HanaMin;
-    src: url(fonts/HanaMinA.ttf),
-        url(fonts/HanaMinB.ttf);
+    src: url(/fonts/HanaMinA.ttf),
+        url(/fonts/HanaMinB.ttf);
 }
 
 .hanzi {
@@ -67,12 +67,6 @@
 
 .pinyin-list {
     height: 4em;
-}
-
-.sentence-list {
-    height: 200px;
-    overflow: visible;
-    /* overflow-y: scroll; */
 }
 
 .full-width {

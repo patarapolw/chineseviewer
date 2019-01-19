@@ -29,9 +29,8 @@
     "webpack-merge": "^4.2.1"
   },
   "scripts": {
-    "start": "concurrently 'yarn run dev' 'cd ../chineseviewer_kotlin ; ./gradlew run'",
+    "start": "concurrently 'yarn run dev' 'cd .. ; heroku local'",
     "dev": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
-    "clone": "node clongPublic.js"
+    "build": "webpack --config webpack.prod.js"
   }
 }

@@ -13,7 +13,7 @@ export default (initialVnode: any) => {
     function parseJieba(s: string) {
         if (s.length > 0) {
             postJson("/api/sentence/jieba", { entry: s }).then((res) => {
-                const distinctVocabList = res.segments
+                const distinctVocabList = res
                     .map((el: any) => el.word)
                     .filter((el: string, _i: number, self: any) => {
                         return XRegExp("\\p{Han}").test(el) && self.indexOf(el) === _i;
@@ -27,8 +27,7 @@ export default (initialVnode: any) => {
     function parseVocab(vList: string[]) {
         postJson("/api/vocab/dictionary/matchMany", { entries: vList }).then((res) => {
             i = 0;
-            vocabList = res.entries;
-            console.log(vocabList);
+            vocabList = res;
             m.redraw();
         });
     }
@@ -55,7 +54,7 @@ export default (initialVnode: any) => {
             } else {
                 if (current.simplified !== currentVocab.simplified) {
                     postJson("/api/sentence/example", { entry: currentVocab.simplified }).then((res) => {
-                        sentenceList = res.entries.map((el: any) => {
+                        sentenceList = res.map((el: any) => {
                             return m(".inline", [
                                 m(".ruby-float", [
                                     m(".rt-float", el.pinyin),

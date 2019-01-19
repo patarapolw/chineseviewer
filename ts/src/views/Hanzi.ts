@@ -103,8 +103,8 @@ export default (initialVnode: any) => {
                 postJson("/api/hanzi/radical", {
                     entry: hanziList[i]
                 }).then((res) => {
-                    subCompositions = res.subCompositions.map((el: string) => getCharacterBlock(el));
-                    superCompositions = res.superCompositions.map((el: string) => getCharacterBlock(el));
+                    subCompositions = res.subcompositions.map((el: string) => getCharacterBlock(el));
+                    superCompositions = res.supercompositions.map((el: string) => getCharacterBlock(el));
                     variants = res.variants.map((el: string) => getCharacterBlock(el));
                     m.redraw();
                 });
@@ -112,7 +112,7 @@ export default (initialVnode: any) => {
                 postJson("/api/all/dictionary", {
                     entry: hanziList[i]
                 }).then((res) => {
-                    vocab = res.entries.map((el: any) => {
+                    vocab = res.map((el: any) => {
                         return m(".inline", [
                             m(".zh-contextmenu.vocab", el.simplified),
                             el.traditional === undefined ? "" : m(".zh-contextmenu.vocab", el.traditional),
@@ -160,7 +160,7 @@ export default (initialVnode: any) => {
                         m(".row", m("h4", "Variants")),
                         m(".row.hanzi-list", variants),
                         m(".row", m("h4", "Vocabularies")),
-                        m(".row.vocab-list", vocab),
+                        m(".row", vocab),
                     ])
                 ])
             ]);

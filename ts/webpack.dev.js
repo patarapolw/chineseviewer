@@ -1,17 +1,20 @@
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
-require('dotenv').config({path: ".."});
+require('dotenv').config({
+    path: "../.env"
+});
 
 module.exports = merge(common, {
     mode: 'development',
     devtool: 'inline-source-map',
     devServer: {
-        contentBase: "/Users/patarapolw/GitHubProjects/chineseviewer4k/chineseviewer_kotlin/src/main/resources/public",
+        contentBase: process.env.PRODUCTION_STATIC_PATH,
         watchContentBase: true,
         port: process.env.TS_PORT || 3000,
         proxy: {
-            "/api": `http://localhost:${process.env.KOTLIN_PORT || 5000}`
+            "/api": `http://localhost:${process.env.PORT || 5000}`
         },
+        publicPath: "/js/",
         stats: {
             colors: true,
             children: false,

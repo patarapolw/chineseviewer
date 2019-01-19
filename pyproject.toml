@@ -12,8 +12,12 @@ peewee = "^3.8"
 wordfreq = "^2.2"
 jieba = "^0.39.0"
 pinyin = "^0.4.0"
+gunicorn = "^19.9"
+python-dotenv = "^0.10.1"
+flask_cors = "^3.0"
 
 [tool.poetry.dev-dependencies]
+pytest = "^4.1"
 
 [build-system]
 requires = ["poetry>=0.12"]

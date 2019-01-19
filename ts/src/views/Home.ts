@@ -11,7 +11,7 @@ export default (initialVnode: any) => {
 
     function parseSentence(s: string) {
         postJson("/api/sentence/jieba", { entry: s }).then((res) => {
-            textSegments = res.segments.map((el: any) => {
+            textSegments = res.map((el: any) => {
                 return !hanRegex.test(el.word) ? el.word : m("ruby", [
                     m("rt", el.pinyin),
                     m(".zh-contextmenu.vocab", el.word),
