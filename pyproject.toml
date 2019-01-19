@@ -8,7 +8,6 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.7"
 flask = "^1.0"
-peewee = "^3.8"
 wordfreq = "^2.2"
 jieba = "^0.39.0"
 pinyin = "^0.4.0"
