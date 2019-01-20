@@ -3,10 +3,12 @@ from typing import NamedTuple
 
 from chineseviewer.dir import ROOT
 
+
 class CjkRadEntry(NamedTuple):
     subcompositions: list
     supercompositions: list
     variants: list
+
 
 class CjkRad:
     def __init__(self):

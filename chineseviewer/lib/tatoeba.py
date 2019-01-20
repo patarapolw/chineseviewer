@@ -6,6 +6,7 @@ from typing import NamedTuple
 
 from chineseviewer.dir import ROOT
 
+
 class ChineseSentenceEntry(NamedTuple):
     chinese: str
     pinyin: str
@@ -27,17 +28,18 @@ class ChineseSentenceEntry(NamedTuple):
             segments.append(seg)
 
         return cls(
-            chinese = chinese,
-            pinyin = pinyin.get("".join(segments)),
-            english = r[1]
+            chinese=chinese,
+            pinyin=pinyin.get("".join(segments)),
+            english=r[1]
         )
+
 
 class Tatoeba:
     def __init__(self):
         self.conn = sqlite3.connect(str(ROOT.joinpath("data/tatoeba.db")), check_same_thread=False)
         self.conn.row_factory = sqlite3.Row
-    
-    def get_chinese(self, s: str)->list:
+
+    def get_chinese(self, s: str) -> list:
         c = self.conn.execute("""
         SELECT
             s1."text" AS t1, s2."text" AS t2

@@ -53,6 +53,9 @@ setup(
         'python-dotenv (>=0.10.1,<0.11.0)',
         'flask_cors (>=3.0,<4.0)',
         'regex (==2018.02.21)',
+        'flask-sqlalchemy (>=2.3,<3.0)',
+        'psycopg2-binary (>=2.7,<3.0)',
+        'flask-migrate (>=2.3,<3.0)',
     ],  # Optional
     # https://setuptools.readthedocs.io/en/latest/setuptools.html#dependencies-that-aren-t-in-pypi
     dependency_links=[],  # Optional

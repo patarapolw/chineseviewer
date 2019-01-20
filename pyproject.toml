@@ -15,6 +15,9 @@ gunicorn = "^19.9"
 python-dotenv = "^0.10.1"
 flask_cors = "^3.0"
 regex = "=2018.02.21"
+flask-sqlalchemy = "^2.3"
+psycopg2-binary = "^2.7"
+flask-migrate = "^2.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^4.1"
