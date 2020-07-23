@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "auth0-js": "^9.9.0",
+    "auth0-js": "^9.13.3",
     "bootstrap": "^4.2.1",
     "dotenv": "^6.2.0",
     "jquery": "^3.3.1",
