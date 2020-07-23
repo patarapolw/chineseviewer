@@ -11,7 +11,7 @@
     "jquery-contextmenu": "^3.0.0-beta.2",
     "jsonwebtoken": "^8.4.0",
     "mithril": "^1.1.6",
-    "popper.js": "^1.14.6",
+    "popper.js": "^1.16.1",
     "uuid": "^3.3.2",
     "xregexp": "^4.2.4"
   },
