@@ -12,7 +12,7 @@
     "jsonwebtoken": "^8.4.0",
     "mithril": "^1.1.6",
     "popper.js": "^1.14.6",
-    "uuid": "^3.3.2",
+    "uuid": "^3.4.0",
     "xregexp": "^4.2.4"
   },
   "devDependencies": {
